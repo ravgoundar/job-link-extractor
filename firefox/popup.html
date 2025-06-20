@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Job Link Extractor</title>
+    <link
+      rel="stylesheet"
+      href="popup.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="icons/icon32.png"
+          alt="Logo"
+          class="header-icon"
+        />
+        <h1>Job Link Extractor</h1>
+      </div>
+
+      <div class="site-info">
+        <div
+          id="currentSite"
+          class="current-site"
+        >
+          <span class="site-indicator"></span>
+          <span class="site-text">Detecting site...</span>
+        </div>
+      </div>
+
+      <div class="site-buttons">
+        <button
+          id="extractButton"
+          class="action-button extract-button"
+        >
+          Extract Links
+        </button>
+      </div>
+
+      <div
+        class="output-section"
+        style="display: none"
+      >
+        <div class="output-header">
+          <span
+            id="linkCount"
+            class="link-count"
+          ></span>
+          <button
+            id="clearButton"
+            class="clear-button"
+            style="display: none"
+          >
+            Clear
+          </button>
+        </div>
+        <textarea
+          id="linksOutput"
+          placeholder="Extracted links will appear here..."
+          readonly
+        ></textarea>
+      </div>
+
+      <div
+        class="action-buttons"
+        style="display: none"
+      >
+        <button
+          id="copyToClipboardButton"
+          class="action-button copy-button"
+        >
+          <div class="button-content">
+            <span class="copy-button-text">Copy to Clipboard</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="check-icon"
+              style="display: none"
+            >
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <div
+        id="statusMessage"
+        class="status-message"
+        style="display: none"
+      ></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
