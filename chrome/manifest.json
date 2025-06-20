@@ -3,7 +3,7 @@
   "name": "Job Link Extractor",
   "version": "1.0",
   "description": "Extracts and cleans job links from specified websites.",
-  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "permissions": ["activeTab", "scripting", "clipboardWrite", "contextMenus", "storage"],
   "host_permissions": ["*://*.seek.co.nz/*", "*://*.seek.com.au/*", "*://*.linkedin.com/*"],
   "background": {
     "service_worker": "background.js"
